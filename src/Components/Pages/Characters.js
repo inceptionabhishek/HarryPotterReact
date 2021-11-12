@@ -55,35 +55,7 @@ const Characters = () => {
         <Typography variant="h2">Characters</Typography>
       </Box>
       <Container component="section" maxWidth="lg" className={classes.root}>
-          {data.map((character) => (
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Paper className={classes.card}>
-                <Box className={classes.icon}>
-                  <img
-                    src={character.image}
-                    alt={character.name}
-                    width="100%"
-                    height="100%"
-                  />
-                </Box>
-                <Box className={classes.title}>
-                  <Typography variant="h5">{character.name}</Typography>
-                </Box>
-                <Box className={classes.featureList}>
-                  <Typography variant="body1">Species: {character.species}</Typography>
-                  <Typography variant="body1">
-                    Origin: {character.origin.name}
-                  </Typography>
-                  <Typography variant="body1">
-                    Status: {character.status}
-                  </Typography>
-                </Box>
-                <Button variant="contained" color="primary">
-                  Learn More
-                </Button>
-              </Paper>
-            </Grid>
-          ))}
+         
       </Container>
     </div>
   );
