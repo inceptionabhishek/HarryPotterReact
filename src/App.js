@@ -25,7 +25,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Paper style={{ height: "200vh" }}>
+      <Paper style={{ height: "auto" }}>
         <Container>
           <Header />
         </Container>
