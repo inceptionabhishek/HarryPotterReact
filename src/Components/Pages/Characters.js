@@ -38,15 +38,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const api = "http://hp-api.herokuapp.com/api/characters";
-const Characters = () => {
-  const [data, setData] = useState(
-    fetch(api)
+const generate_data = () => {
+  fetch(api)
     .then((res) => res.json())
     .then((data) => {
-      setData(data);
-      console.log(data);
-    })
-  )
+      return data;
+    });
+};
+const Characters = () => {
+  const [data, setData] = useState(generate_data)
+  
+  
+
   
   const classes = useStyles();
   return (
@@ -55,7 +58,7 @@ const Characters = () => {
         <Typography variant="h2">Characters</Typography>
       </Box>
       <Container component="section" maxWidth="lg" className={classes.root}>
-         
+        
       </Container>
     </div>
   );
